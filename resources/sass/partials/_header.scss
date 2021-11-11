@@ -1,0 +1,66 @@
+header {
+    
+    .headerTop {
+        background-color: $commonBlue;
+        padding: .3125rem .625rem;
+        font-size: 0.8rem;
+        color: #fff;
+
+        .container {
+            @include dFlex;
+            justify-content: flex-end;
+            
+            div:last-child {
+                margin-left: 3.125rem;
+            }
+        }
+
+    }
+    
+    .headerBottom {
+        @include dFlex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 .625rem;
+    
+        img {
+            width: 5rem;
+        }
+    
+        ul {
+            @include dFlex;
+            @include list;
+    
+            li {
+                padding: 0 .9375rem;
+            }
+    
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: $black;
+                padding: 3.125rem 0;
+    
+                &.active {
+                    color: $commonBlue;
+                    border-bottom: .4375rem solid $commonBlue;
+                }
+            }
+        }
+
+        .containerSearch {
+            margin: 2.9375rem 0 3.375rem 0;
+            border-bottom: .125rem solid $commonBlue;
+
+            input {
+                border: none;
+                text-align: right;
+                font-size: 1rem;
+                padding: .1875rem;
+            }
+            ::placeholder {
+                color: #000;
+            }
+        }
+    }
+}
